@@ -36,25 +36,26 @@ Instale os pacotes necessários com:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
-
+```
+---
 🔍 Etapas da Análise
 1. Carregamento dos Dados
-python
-Copiar
-Editar
+---
+```
 import pandas as pd
 df = pd.read_csv('dados.csv')
+```
+---
 2. Análise Exploratória
-Histograma de variáveis
 
-Matriz de correlação
+- Histograma de variáveis
 
-Boxplots para outliers
+- Matriz de correlação
 
+- Boxplots para outliers
+---
 3. Regressão Linear Múltipla
-python
-Copiar
-Editar
+```
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
@@ -63,38 +64,43 @@ y = df['target']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 modelo = LinearRegression().fit(X_train, y_train)
+```
+---
 4. Avaliação do Modelo
-python
-Copiar
-Editar
+```
 from sklearn.metrics import mean_squared_error, r2_score
 
 y_pred = modelo.predict(X_test)
 print("R²:", r2_score(y_test, y_pred))
 print("RMSE:", mean_squared_error(y_test, y_pred, squared=False))
+
+```
+---
 5. Interpretação dos Coeficientes
-python
-Copiar
-Editar
+
+```
 coeficientes = pd.DataFrame({'Variável': X.columns, 'Coeficiente': modelo.coef_})
 print(coeficientes)
+
+```
 📊 Exemplos de Gráficos
-python
-Copiar
-Editar
+
+```
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 sns.heatmap(df.corr(), annot=True, cmap="coolwarm")
 plt.title("Correlação entre variáveis")
 plt.show()
+
+```
 📌 Conclusão
 A regressão linear múltipla é uma ferramenta poderosa para prever métricas de negócio e entender o impacto de múltiplas variáveis independentes sobre um resultado. Este projeto mostra uma aplicação prática, desde a limpeza de dados até a interpretação estatística.
 
 📚 Referências
-Hands-On Machine Learning - Aurélien Géron
+Hands-On Machine Learning - Aurélien Géron: https://www.oreilly.com/library/view/hands-on-machine-learning/
 
-Scikit-learn documentation
+Scikit-learn documentation: https://scikit-learn.org/stable/
 
-Wes McKinney – Python for Data Analysis
+Wes McKinney – Python for Data Analysis: https://wesmckinney.com/book/
 
