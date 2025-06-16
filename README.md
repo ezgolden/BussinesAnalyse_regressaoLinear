@@ -94,10 +94,10 @@ plt.title("Correlação entre variáveis")
 plt.show()
 
 ```
-📌 Conclusão
+📌 # Conclusão
 A regressão linear múltipla é uma ferramenta poderosa para prever métricas de negócio e entender o impacto de múltiplas variáveis independentes sobre um resultado. Este projeto mostra uma aplicação prática, desde a limpeza de dados até a interpretação estatística.
 
-📚 Referências
+📚 # Referências
 Hands-On Machine Learning - Aurélien Géron: https://www.oreilly.com/library/view/hands-on-machine-learning/
 
 Scikit-learn documentation: https://scikit-learn.org/stable/
